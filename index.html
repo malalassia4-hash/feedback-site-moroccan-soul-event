@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moroccan Soul Event — Feedback Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container" role="main">
+    <section class="hero">
+      <div class="mosaic"></div>
+      <h1>Moroccan Soul Event — Feedback</h1>
+      <p class="lead">Merci de prendre un moment pour répondre à ces questions afin d'améliorer notre site et services.</p>
+    </section>
+
+    <form id="feedbackForm" novalidate>
+      <!-- 1. Première impression -->
+      <div class="card">
+        <label for="impression">1. Quelle est votre première impression en entendant “Moroccan Soul Event” ?</label>
+        <select id="impression" name="impression" required>
+          <option value="">Choisissez...</option>
+          <option value="Mariages">Organisation de mariages</option>
+          <option value="Services de luxe">Services de luxe</option>
+          <option value="Style marocain">Style marocain</option>
+          <option value="Plateforme complète">Plateforme complète d’événements</option>
+        </select>
+      </div>
+
+      <!-- 2. Besoin d'un site complet -->
+      <div class="card">
+        <label>Avez-vous déjà eu besoin d’un site regroupant tous les services d’événements ?</label>
+        <div class="radio-list">
+          <label><input type="radio" name="besoin" value="Oui" required /> Oui</label>
+          <label><input type="radio" name="besoin" value="Peut-être" /> Peut-être</label>
+          <label><input type="radio" name="besoin" value="Non" /> Non</label>
+        </div>
+      </div>
+
+      <!-- 3. Services préférés -->
+      <div class="card">
+        <label>Quels services vous intéressent le plus ? (plusieurs choix possibles)</label>
+        <div class="checkbox-list">
+          <label><input type="checkbox" name="services" value="Salles" /> Salles de fête</label>
+          <label><input type="checkbox" name="services" value="Traiteur" /> Traiteur</label>
+          <label><input type="checkbox" name="services" value="Photo" /> Photo & Vidéo</label>
+          <label><input type="checkbox" name="services" value="Décoration" /> Décoration</label>
+          <label><input type="checkbox" name="services" value="Musique" /> Musique / Animation</label>
+          <label><input type="checkbox" name="services" value="Maquillage" /> Maquillage & Beauté</label>
+          <label><input type="checkbox" name="services" value="Voitures" /> Location de voitures de luxe</label>
+          <label><input type="checkbox" name="services" value="Organisation complète" /> Organisation complète</label>
+        </div>
+      </div>
+
+      <!-- 4. Design préféré -->
+      <div class="card">
+        <label>Comment préférez-vous le design du site ?</label>
+        <select name="design" required>
+          <option value="">Choisissez...</option>
+          <option value="Simple">Simple et facile</option>
+          <option value="Élégant">Élégant avec une touche marocaine</option>
+          <option value="Moderne">Moderne et luxueux</option>
+          <option value="Complet">Complet et détaillé</option>
+        </select>
+      </div>
+
+      <!-- 5. Note sur le concept -->
+      <div class="card">
+        <label>Quelle note donneriez-vous à l’idée du site (1 à 10) ?</label>
+        <input type="number" name="note" min="1" max="10" required />
+      </div>
+
+      <!-- 6. Éléments indispensables -->
+      <div class="card">
+        <label>Quel élément doit absolument être présent pour que vous utilisiez le site ?</label>
+        <input type="text" name="element" placeholder="Ex : photos HD, avis, prix clairs..." />
+      </div>
+
+      <!-- 7. Regrouper les services -->
+      <div class="card">
+        <label>Que pensez-vous de regrouper salles, traiteurs, maquillage et voitures sur un seul site ?</label>
+        <div class="radio-list">
+          <label><input type="radio" name="regrouper" value="Très bonne idée" required /> Très bonne idée</label>
+          <label><input type="radio" name="regrouper" value="Bien mais à organiser" /> Bien mais à organiser</label>
+          <label><input type="radio" name="regrouper" value="Pas nécessaire" /> Pas nécessaire</label>
+        </div>
+      </div>
+
+      <!-- 8. Application mobile -->
+      <div class="card">
+        <label>Souhaitez-vous une application mobile du site ?</label>
+        <div class="radio-list">
+          <label><input type="radio" name="app" value="Oui" required /> Oui</label>
+          <label><input type="radio" name="app" value="Non" /> Non</label>
+          <label><input type="radio" name="app" value="Peut-être" /> Peut-être</label>
+        </div>
+      </div>
+
+      <!-- 9. Langue du site -->
+      <div class="card">
+        <label>Préférez-vous le site en arabe, en français ou bilingue ?</label>
+        <div class="radio-list">
+          <label><input type="radio" name="langue" value="Arabe" required /> Arabe</label>
+          <label><input type="radio" name="langue" value="Français" /> Français</label>
+          <label><input type="radio" name="langue" value="Bilingue" /> Bilingue</label>
+        </div>
+      </div>
+
+      <!-- 10. Conseil ou idée -->
+      <div class="card">
+        <label>Avez-vous un conseil ou une idée pour améliorer le site ?</label>
+        <textarea name="conseil" rows="4" placeholder="Votre avis..."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="submit-wrap">
+        <button type="submit" id="submitBtn">Envoyer</button>
+      </div>
+    </form>
+
+    <div id="thanks" class="thanks" style="display:none;">
+      <h2>Merci pour votre retour !</h2>
+      <p>Vos réponses nous aideront à améliorer Moroccan Soul Event.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

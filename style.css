@@ -1,0 +1,126 @@
+:root{
+  --bg: #f6efe6;
+  --tile-blue: #0f5a88;
+  --tile-orange: #d48b2a;
+  --tile-dark: #14506f;
+  --card-bg: #ffffff;
+  --accent: #0f5a88;
+  --muted: #4a4a4a;
+  --radius: 14px;
+  --shadow: 0 12px 30px rgba(15,80,120,0.08);
+  --maxw: 800px;
+  font-family: "Segoe UI", Roboto, "Noto Sans Arabic", Tahoma, sans-serif;
+}
+
+body{
+  margin:0;
+  background: linear-gradient(180deg,#f3efe9 0%,var(--bg) 100%);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:28px;
+}
+
+.container{
+  width:100%;
+  max-width:var(--maxw);
+}
+
+/* hero */
+.hero{
+  text-align:center;
+  margin-bottom:28px;
+}
+.hero h1{
+  font-size:32px;
+  color:var(--tile-dark);
+  margin:0 0 8px 0;
+}
+.hero p.lead{
+  color:#333;
+  opacity:0.85;
+  margin:0;
+}
+.mosaic{
+    height: 120px;
+    width: 100%;
+    background-image: url('download\ \(1\).jpg');
+    background-repeat: repeat-x;
+    background-size: cover;
+    border-radius: 0;
+    border-bottom: 14px;
+}
+
+/* cards */
+.card{
+  background:var(--card-bg);
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:14px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(15,80,120,0.06);
+}
+label{
+  display:block;
+  margin-bottom:8px;
+  font-weight:600;
+  color:var(--tile-dark);
+}
+input[type="text"], input[type="number"], select, textarea{
+  width:100%;
+  border:1px solid #e6e6e6;
+  padding:10px 12px;
+  border-radius:8px;
+  font-size:15px;
+  outline:none;
+}
+textarea{min-height:110px;resize:vertical}
+
+/* radio and checkbox */
+.radio-list, .checkbox-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.radio-list label, .checkbox-list label{
+  font-weight:500;
+  color:#222;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* submit */
+.submit-wrap{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:10px;
+}
+button[type="submit"]{
+  padding:12px 20px;
+  font-size:16px;
+  font-weight:600;
+  border-radius:10px;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 8px 18px rgba(15,80,120,0.15);
+}
+button[type="submit"]:disabled{
+  opacity:0.6;
+  cursor:default;
+}
+
+/* thanks */
+.thanks{
+  text-align:center;
+  padding:28px;
+}
+
+/* responsive */
+@media(max-width:520px){
+  .hero h1{font-size:26px;}
+  .mosaic{height:80px;background-size:180px 90px;}
+}
