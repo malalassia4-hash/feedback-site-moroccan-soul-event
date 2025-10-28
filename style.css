@@ -43,9 +43,9 @@ body{
   margin:0;
 }
 .mosaic{
-    height: 120px;
+    height: 140px;
     width: 100%;
-    background-image: url('download\ \(1\).jpg');
+    background-image: url('images/photo.jpg');
     background-repeat: repeat-x;
     background-size: cover;
     border-radius: 0;
